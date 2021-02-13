@@ -1,0 +1,74 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <a asp-page="/index"><div class="rmb__header">
+                REMBO.
+            </div></a>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-6 rmb__left-container">
+            <div class="rmb__left-div">
+                <h1 class="rmb__left-div-title">
+                    GREAT THINGS
+                    <br />
+                    ARE COMING
+                </h1>
+            </div>
+            @if (Model.EmailAddress == null)
+            {
+                <div id="input" class="rmb__left-div-text">
+                    Sign up to be the first
+                    <br />
+                    to know when we launch
+                </div>
+            }
+
+            <div>
+                <div class="rmb__left-div-input">
+                    <p>@ViewData["confirmation"]</p>
+                    <form method="post" id="emailform">
+                        <div class="rmb__input-wrapper">
+                            <label><input name="EmailAddress" class="rmb__input" placeholder="Enter your email here*" type="text" /></label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="rmb__left-div-button">
+                    <button type="submit" form="emailform" value="Submit">Notify Me</button>
+                </div>
+            </div>
+
+            <div class="rmb__social">
+                <a href="https://web.facebook.com/Rembo-Beauty-and-Wellness-530676801198631" target="_blank">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://web.facebook.com/Rembo-Beauty-and-Wellness-530676801198631" target="_blank">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+                <a href="https://www.instagram.com/rembo_beauty_wellness/" target="_blank">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-6 rmb__right-container">
+            <div class="rmb__right-div" />
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Contact ---- Cell: 0732000000</p>
+    <p>Email: rembobeautyandwellness@gmail.com</p>
+</footer>

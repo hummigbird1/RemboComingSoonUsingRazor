@@ -1,0 +1,323 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* Provide sufficient contrast against white background */
+a {
+    text-decoration: none !important;
+}
+
+
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1920px;
+    }
+}
+
+@media (max-width: 992px) {
+    .rmd__left-div-title {
+        font-size: 42px;
+    }
+    .rmb__input-wrapper::before {
+        top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 14px;
+    }
+    .container {
+        background-image: url('../images/coming-soon.jpg');
+        opacity: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .rmb__input {
+        background: transparent;
+    }
+
+    .rmb__right-container {
+        display: none;
+    }
+
+    .rmb__right-div {
+        height: 400px;
+        width: auto;
+        border: solid 1.5px #2B014B;
+    }
+
+    .rmb__left-container {
+        margin-bottom: 4em;
+    }
+
+    .rmb__left-div .rmb__left-div-title {
+        font-size: 85px;
+        text-align: center;
+        padding-bottom: 10px;
+        color: #2B014B;
+        line-height: 1;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /*margin-bottom: 60px;*/
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+}
+
+.rmb__header {
+    font-family: Oswald, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #2B014B;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: 80px;
+}
+
+.rmb__left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rmb__left-div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+    .rmb__left-div .rmb__left-div-title {
+        font-family: Oswald, sans-serif;
+        font-size: 85px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+        color: #2B014B;
+        line-height: 2;
+    }
+
+.rmb__left-div-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+    line-height: 3;
+    padding-top: 20px;
+    color: #545454;
+}
+
+.rmb__left-div-input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    align-self: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.rmb__left-div-input p {
+    font-size: 0.7em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    padding-top: 20px;
+    color: #545454;
+    line-height: 3;
+    text-align: center;
+}
+
+#emailform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rmb__input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 290px;
+}
+
+.rmb__input {
+    border: none;
+    border-bottom: 1px solid #F2DB07;
+    text-align: center;
+    color: #545454;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    position: relative;
+    width: 290px;
+}
+
+.rmb__input-wrapper::before {
+    content: "";
+    width: 0;
+    height: 3px;
+    display: block;
+    position: relative;
+    top: 47px;
+    left: 0;
+    background-color: #f2db07;
+    z-index: 1;
+    transition: width 0.5s ease-in-out;
+}
+
+.rmb__input-wrapper:focus-within::before {
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #F2DB07;
+}
+
+.rmb__input:focus + .rmb__underline {
+    transform: scale(1);
+}
+
+.rmb__underline {
+    background-color: #F2DB07;
+    display: inline-block;
+    height: 2px;
+    left: 50px;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0,1);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 202px;
+    margin-bottom: -15px;
+}
+
+.rmb__left-div-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: .5em;
+}
+
+    .rmb__left-div-button > button {
+        background-color: #2B014B;
+        color: white;
+        border: none;
+        outline: none;
+        transition: transform 0.4s ease;
+        border-radius: 2px;
+    }
+
+        .rmb__left-div-button > button:hover {
+            background-color: #AE86FF;
+            transform: scale(1.0375);
+            transition: transform 0.4s ease;
+        }
+
+    .rmb__left-div-button button {
+        width: 250px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+.rmb__social {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+i.bx {
+    color: #2B014B;
+    font-size: 40px;
+    cursor: pointer;
+    margin: 28px;
+    transition: transform 0.5s ease;
+}
+
+    i.bx:hover {
+        color: #AE86FF;
+        transform: scale(1.2);
+        transition: transform 0.5s ease;
+    }
+
+ul .rmb__social {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+}
+
+    ul .rmb__social li {
+        display: inline-block;
+    }
+
+.rmb__right-div {
+    height: 80vh;
+    width: 100%;
+}
+
+.rmb__right-div {
+    height: 80vh;
+    width: 100%;
+    border: solid 1.5px #2B014B;
+    background-image: url('../images/coming-soon.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 16px;
+    color: #545454;
+    width: 100%;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    footer > p {
+        margin-bottom: .375em;
+        font-size: 12px;
+    }
+
+.rem__copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
