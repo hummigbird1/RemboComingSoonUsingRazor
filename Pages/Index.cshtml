@@ -37,14 +37,14 @@
                     <p>@ViewData["confirmation"]</p>
                     <form method="post" id="emailform">
                         <div class="rmb__input-wrapper">
-                            <label><input name="EmailAddress" class="rmb__input" placeholder="Enter your email here*" type="text" /></label>
+                            <label><input asp-for="EmailAddress" class="rmb__input" placeholder="Enter your email here*" type="email" /></label>
                         </div>
-
+                        <div class="rmb__left-div-button">
+                            <button type="submit" form="emailform" value="Submit">Notify Me</button>
+                        </div>
                     </form>
                 </div>
-                <div class="rmb__left-div-button">
-                    <button type="submit" form="emailform" value="Submit">Notify Me</button>
-                </div>
+                
             </div>
 
             <div class="rmb__social">
