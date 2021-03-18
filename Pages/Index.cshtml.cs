@@ -45,6 +45,7 @@ namespace RemboComingSoon.Pages
                 return Page();
             }
 
+            ViewData["confirmation"] = $" Thank you for signing up. Information will be sent to {EmailAddress}";
 
             // However since you are receiving a simple string as property now, you need to create a model for storing it in the database
             // in any way that suits your needs. 
@@ -57,7 +58,7 @@ namespace RemboComingSoon.Pages
             _emailDbContext.Email.Add(emailDbModel);
             await _emailDbContext.SaveChangesAsync();
 
-            return (IActionResult)(ViewData["confirmation"] = $" Thank you for signing up. Information will be sent to {EmailAddress}");
+            return Page();
         }
     }
 }
