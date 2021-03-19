@@ -34,7 +34,7 @@
 
             <div>
                 <div class="rmb__left-div-input">
-                    <p>@ViewData["confirmation"]</p>
+                    <p>@TempData["confirmation"]</p>
                     <form method="post" id="emailform">
                         <div class="rmb__input-wrapper">
                             <label><input asp-for="EmailAddress" class="rmb__input" placeholder="Enter your email here*" type="email" /></label>
