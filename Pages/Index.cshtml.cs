@@ -58,6 +58,14 @@ namespace RemboComingSoon.Pages
             _emailDbContext.Email.Add(emailDbModel);
             await _emailDbContext.SaveChangesAsync();
 
+            // First we need to reset the bound property
+            EmailAddress = null;
+            // And the ModelState that contains the "validated" model for the post action
+            ModelState.Clear();
+
+            // Only when those 2 are cleared the the input field is reset. 
+            // If this is not done, the Page that is rendered below, will contain the data from before since it still there
+
             return Page();
         }
     }
